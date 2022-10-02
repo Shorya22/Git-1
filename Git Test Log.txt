@@ -1,0 +1,1086 @@
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git init
+Reinitialized existing Git repository in F:/Git 1/.git/
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ ls -lart
+total 109
+-rw-r--r-- 1 shorya sharma 197121 100194 Oct  1 11:53  git-cheat-sheet-education.pdf
+-rw-r--r-- 1 shorya sharma 197121    422 Oct  2 10:12 'water drink notification.py'
+drwxr-xr-x 1 shorya sharma 197121      0 Oct  2 10:25  ./
+drwxr-xr-x 1 shorya sharma 197121      0 Oct  2 10:28  ../
+drwxr-xr-x 1 shorya sharma 197121      0 Oct  2 10:41  .git/
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git add Git 1
+fatal: pathspec 'Git' did not match any files
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git add water drink notification.py
+fatal: pathspec 'water' did not match any files
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        abc.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git add abc.html
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   abc.html
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git  commit
+Aborting commit due to empty commit message.
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git commit
+Aborting commit due to empty commit message.
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git commit
+[master 4dcc475] First commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 abc.html
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ touch contact
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ touch about
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ touch products
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ touch service
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   water drink notification.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about
+        contact
+        products
+        service
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git add -A
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about
+        new file:   contact
+        new file:   products
+        new file:   service
+        modified:   water drink notification.py
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git commit -m "all html"
+[master 3aceb37] all html
+ 5 files changed, 1 insertion(+), 1 deletion(-)
+ create mode 100644 about
+ create mode 100644 contact
+ create mode 100644 products
+ create mode 100644 service
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   abc.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git checkout abc.html
+Updated 1 path from the index
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git checkout abc.html
+Updated 0 paths from the index
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   abc.html
+        modified:   about
+        modified:   contact
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git checkout -f
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git log
+commit 3aceb37199a8db38b9612f131716871ecdcc70e5 (HEAD -> master)
+Author: “[Shorya <“[shoryamathura22@gmail.com]”>
+Date:   Sun Oct 2 11:04:00 2022 +0530
+
+    all html
+
+commit 4dcc475cdcecb789a18198d80718a00821f12423
+Author: “[Shorya <“[shoryamathura22@gmail.com]”>
+Date:   Sun Oct 2 10:57:18 2022 +0530
+
+    First commit
+
+commit 0182434b8e5506216218fde090b724eb749aee62
+Author: “[Shorya <“[shoryamathura22@gmail.com]”>
+Date:   Sun Oct 2 10:27:21 2022 +0530
+
+    1st Git file
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git log -p - 3
+fatal: ambiguous argument '3': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git log -p -2
+commit 3aceb37199a8db38b9612f131716871ecdcc70e5 (HEAD -> master)
+Author: “[Shorya <“[shoryamathura22@gmail.com]”>
+Date:   Sun Oct 2 11:04:00 2022 +0530
+
+    all html
+
+diff --git a/about b/about
+new file mode 100644
+index 0000000..e69de29
+diff --git a/contact b/contact
+new file mode 100644
+index 0000000..e69de29
+commit 3aceb37199a8db38b9612f131716871ecdcc70e5 (HEAD -> master)
+Author: “[Shorya <“[shoryamathura22@gmail.com]”>
+Date:   Sun Oct 2 11:04:00 2022 +0530
+
+    all html
+
+diff --git a/about b/about
+new file mode 100644
+index 0000000..e69de29
+diff --git a/contact b/contact
+new file mode 100644
+index 0000000..e69de29
+diff --git a/products b/products
+new file mode 100644
+index 0000000..e69de29
+diff --git a/service b/service
+new file mode 100644
+index 0000000..e69de29
+diff --git a/water drink notification.py b/water drink notification.py
+index bfc3d29..3c88037 100644
+index bfc3d29..3c88037 100644
+--- a/water drink notification.py
++++ b/water drink notification.py
+@@ -8,5 +8,5 @@ if __name__== "__main__":
+     title = "Please Drink Water",
+     message = "Drinking water is like washing out your insides. The water will cleanse the system, fill you up, decrease your caloric load and improve the function of all your tissues.",
+
+-    timeout = 30
++    timeout = 10
+     )
+\ No newline at end of file
+
+commit 4dcc475cdcecb789a18198d80718a00821f12423
+Author: “[Shorya <“[shoryamathura22@gmail.com]”>
+Date:   Sun Oct 2 10:57:18 2022 +0530
+
+    First commit
+
+diff --git a/abc.html b/abc.html
+new file mode 100644
+index 0000000..e69de29
+(END)
+--- a/water drink notification.py
++++ b/water drink notification.py
+@@ -8,5 +8,5 @@ if __name__== "__main__":
+     title = "Please Drink Water",
+     message = "Drinking water is like washing out your insides. The water will cleanse the system, fill you up, decrease your caloric load and improve the function of all your tissues.",
+
+-    timeout = 30
++    timeout = 10
+     )
+\ No newline at end of file
+
+commit 4dcc475cdcecb789a18198d80718a00821f12423
+Author: “[Shorya <“[shoryamathura22@gmail.com]”>
+Date:   Sun Oct 2 10:57:18 2022 +0530
+
+    First commit
+
+diff --git a/abc.html b/abc.html
+new file mode 100644
+index 0000000..e69de29
+~
+(END)
+--- a/water drink notification.py
++++ b/water drink notification.py
+@@ -8,5 +8,5 @@ if __name__== "__main__":
+     title = "Please Drink Water",
+     message = "Drinking water is like washing out your insides. The water will cleayour tissues.",
+
+-    timeout = 30
++    timeout = 10
+     )
+\ No newline at end of file
+
+commit 4dcc475cdcecb789a18198d80718a00821f12423
+Author: “[Shorya <“[shoryamathura22@gmail.com]”>
+Date:   Sun Oct 2 10:57:18 2022 +0530
+
+    First commit
+
+diff --git a/abc.html b/abc.html
+new file mode 100644
+index 0000000..e69de29
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git diff
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   water drink notification.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git diff
+diff --git a/water drink notification.py b/water drink notification.py
+index 3c88037..a3c6933 100644
+--- a/water drink notification.py
++++ b/water drink notification.py
+@@ -8,5 +8,5 @@ if __name__== "__main__":
+     title = "Please Drink Water",
+     message = "Drinking water is like washing out your insides. The water will cleanse the system, fill you up, decrease your caloric load and improve the function of all your tissues.",
+
+-    timeout = 10
++    timeout = 5
+     )
+\ No newline at end of file
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git add -A
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   water drink notification.py
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git commit -A
+error: unknown switch `A'
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup [(amend|reword):]commit
+                          use autosquash formatted message to fixup or amend/reword specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    --trailer <trailer>   add custom trailer(s)
+    -s, --signoff         add a Signed-off-by trailer
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   water drink notification.py
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git commit -f
+error: unknown switch `f'
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup [(amend|reword):]commit
+                          use autosquash formatted message to fixup or amend/reword specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    --trailer <trailer>   add custom trailer(s)
+    -s, --signoff         add a Signed-off-by trailer
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git commit water drink notification
+error: pathspec 'water' did not match any file(s) known to git
+error: pathspec 'drink' did not match any file(s) known to git
+error: pathspec 'notification' did not match any file(s) known to git
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git stagged
+git: 'stagged' is not a git command. See 'git --help'.
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   water drink notification.py
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$  git add water drink notification.py
+fatal: pathspec 'water' did not match any files
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git add -A
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   water drink notification.py
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git restore --staged <water drink notification.py>
+bash: syntax error near unexpected token `newline'
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git restore
+fatal: you must specify path(s) to restore
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git restore --staged
+fatal: you must specify path(s) to restore
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git restore --staged [water drink notification.py]
+error: pathspec '[water' did not match any file(s) known to git
+error: pathspec 'drink' did not match any file(s) known to git
+error: pathspec 'notification.py]' did not match any file(s) known to git
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   water drink notification.py
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git commit
+[master f851e71] update
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   water drink notification.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git add -A
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   water drink notification.py
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git diff --staged
+diff --git a/water drink notification.py b/water drink notification.py
+index a3c6933..3c88037 100644
+--- a/water drink notification.py
++++ b/water drink notification.py
+@@ -8,5 +8,5 @@ if __name__== "__main__":
+     title = "Please Drink Water",
+     message = "Drinking water is like washing out your insides. The water will cleanse the system, fill you up, decrease your caloric load and improve the function of all your tissues.",
+
+-    timeout = 5
++    timeout = 10
+     )
+\ No newline at end of file
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git checkout -f
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ ls
+ abc.html   contact                         products  'water drink notification.py'
+ about      git-cheat-sheet-education.pdf   service
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ touch waste.html
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ ls
+ abc.html   contact                         products   waste.html
+ about      git-cheat-sheet-education.pdf   service   'water drink notification.py'
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git add -A
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   waste.html
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git add -A
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   waste.html
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git commit -a -m "commit waste"
+[master 1ca9d57] commit waste
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 waste.html
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ ld
+bash: ld: command not found
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ ls
+ abc.html   contact                         products   waste.html
+ about      git-cheat-sheet-education.pdf   service   'water drink notification.py'
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git rm --cached waste.html
+rm 'waste.html'
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ ls
+ abc.html   contact                         products   waste.html
+ about      git-cheat-sheet-education.pdf   service   'water drink notification.py'
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    waste.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        waste.html
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    waste.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        waste.html
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    waste.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        waste.html
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git add -A
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git rm waste.html
+rm 'waste.html'
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ ls
+ abc.html   contact                         products  'water drink notification.py'
+ about      git-cheat-sheet-education.pdf   service
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git commit -a -m "removing waste"
+[master 08b4f3b] removing waste
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 waste.html
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git log -p -2
+commit 08b4f3b22545adaf50c474a12fa4f8ba56ab6be4 (HEAD -> master)
+Author: “[Shorya <“[shoryamathura22@gmail.com]”>
+Date:   Sun Oct 2 11:51:58 2022 +0530
+
+    removing waste
+
+diff --git a/waste.html b/waste.html
+deleted file mode 100644
+index e69de29..0000000
+
+commit 1ca9d57b67363c8304de9f5f78acc8c2928964e4
+Author: “[Shorya <“[shoryamathura22@gmail.com]”>
+Date:   Sun Oct 2 11:47:00 2022 +0530
+
+    commit waste
+
+diff --git a/waste.html b/waste.html
+new file mode 100644
+index 0000000..e69de29
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git -s
+unknown option: -s
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status -s
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status -s
+ M abc.html
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git add abc.html
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status -s
+M  abc.html
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git add -A
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   abc.html
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git add abc.html
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   abc.html
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git add -abc.html
+error: unknown switch `a'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    --renormalize         renormalize EOL of tracked files (implies -u)
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+    --sparse              allow updating entries outside of the sparse-checkout cone
+    --chmod (+|-)x        override the executable bit of the listed files
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git add -a
+error: unknown switch `a'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    --renormalize         renormalize EOL of tracked files (implies -u)
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+    --sparse              allow updating entries outside of the sparse-checkout cone
+    --chmod (+|-)x        override the executable bit of the listed files
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git add abc.html
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   abc.html
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git add -A
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git add abc.html
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   abc.html
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git add -A
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   abc.html
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git checkout
+M       abc.html
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   abc.html
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git commit -A
+error: unknown switch `A'
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup [(amend|reword):]commit
+                          use autosquash formatted message to fixup or amend/reword specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    --trailer <trailer>   add custom trailer(s)
+    -s, --signoff         add a Signed-off-by trailer
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git commit -a
+[master 51e5459] commit
+ 1 file changed, 1 insertion(+)
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status -s
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git checkout abc.html
+Updated 0 paths from the index
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git checkout abc.html
+Updated 1 path from the index
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git checkout abc.html
+Updated 0 paths from the index
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ it status
+bash: it: command not found
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ touch.gitignore
+bash: touch.gitignore: command not found
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ touch .gitignore
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ touch mylog.log
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git rm --mylog.log
+error: unknown option `mylog.log'
+usage: git rm [<options>] [--] <file>...
+
+    -n, --dry-run         dry run
+    -q, --quiet           do not list removed files
+    --cached              only remove from the index
+    -f, --force           override the up-to-date check
+    -r                    allow recursive removal
+    --ignore-unmatch      exit with a zero status even if nothing matched
+    --sparse              allow updating entries outside of the sparse-checkout cone
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git rm -mylog.log
+error: unknown switch `m'
+usage: git rm [<options>] [--] <file>...
+
+    -n, --dry-run         dry run
+    -q, --quiet           do not list removed files
+    --cached              only remove from the index
+    -f, --force           override the up-to-date check
+    -r                    allow recursive removal
+    --ignore-unmatch      exit with a zero status even if nothing matched
+    --sparse              allow updating entries outside of the sparse-checkout cone
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        mylog.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git rm .gitignore
+fatal: pathspec '.gitignore' did not match any files
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git rm .gitignore
+fatal: pathspec '.gitignore' did not match any files
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git rm mylog.log
+fatal: pathspec 'mylog.log' did not match any files
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+shorya sharma@Shorya MINGW64 /f/Git 1 (master)
+$
